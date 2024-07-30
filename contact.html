@@ -1,0 +1,152 @@
+<html>
+<head>
+<link rel="stylesheet" href="contact.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<title>Contact Us</title>
+</head>
+<body>
+<div class="banner">
+    <nav>
+        <div class="banner">
+          <di v class="navibar">
+            <a href="index.html" ><img style =  "border-radius: 20%;" src="image/logo2.png" title="Radiohead" width="182px" height="90px" ></a> 
+          <ul>		
+                <li><a href="index.html">Home</a></li>
+                <li><a href="archive.html">Archive</a></li>
+                <li><a href="merch.html">Merchandise</a></li>
+                <li><a href="discography.html">Discography</a></li>
+              </ul>
+              <ul class="user">
+                <a href="carts.html"><img src="image/cart.png" title="Shopping Cart" width="45px" height="45px"></a>
+                <img src="image/profile.png" title="Your Profile" width="40px" height="40px" onclick="toggleMenu()">
+              </ul>
+              
+              <div class="sub-menu-wrap" id="subMenu">
+              <div class="sub-menu">
+                <div class="user-info">
+                  <img src="image/profile.png">
+                  <h2>User</h2>
+                </div>
+                <hr>
+      
+                <a href="profile.html" class="sub-menu-link">
+                <img src="image/user.png">
+                <p>PROFILE & SETTINGS</p>
+                </a>
+                  <a href="login.html" class="sub-menu-link">
+                    <img src="image/logout.png">
+                    <p>LOGOUT</p>
+                  </a>
+                </hr>
+            </div>
+        </div>
+    </nav>
+	<div class="contactus">
+		<div class="title">
+			<h2>CONTACT US</h2>
+		</div>
+		<div class="box">
+			<!--FORM BOX-->
+			<div class="contact form">
+				<h3>SEND A MESSAGE</h3>
+				<form>
+					<div class="formBox">
+						<div class="row50">
+							<div class="inputBox">
+								<span>First Name</span>
+								<input type="text" placeholder="First Name">
+							</div>
+							<div class="inputBox">
+								<span>Last Name</span>
+								<input type="text" placeholder="Last Name">
+							</div>
+						</div>
+						
+						<div class="row50">
+							<div class="inputBox">
+								<span>Email</span>
+								<input type="text" placeholder="User@gmail.com">
+							</div>
+							<div class="inputBox">
+								<span>Mobile</span>
+								<input type="text" placeholder="+60 123456789">
+							</div>
+						</div>
+						
+						<div class="row100">
+							<div class="inputBox">
+								<span>Message</span>
+								<textarea placeholder="Write your message here..."></textarea>
+							</div>
+						</div>
+						
+						<div class="row100">
+							<div class="inputBox">
+								<input type="submit" value="SEND">
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			
+			<!--INFO BOX-->
+			<div class="contact info">
+				<h3>Contact Info</h3>
+				<div class="infoBox">
+					<div>
+					<span><img src="image/emailIcon.png"></span>
+					<p>Cyberjaya, Selangor<br>Malaysia</br></p>
+					</div>
+					<div>
+						<span><img src="image/emailIcon.png"></span>
+						<a href="mailto:hazimkhayr@outlook.my">hazimkhayr@outlook.my</a>
+					</div>
+					<div>
+						<span><img src="image/phoneIcon.png"></span>
+						<a href="tel:+60-123456789">+60 123456789</a>
+					</div>
+					<!--Social Media Link-->
+					<ul class="sci">
+                        <a href="https://www.instagram.com/radiohead/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+					</ul>
+				</div>
+			</div>
+			<!--MAP BOX-->
+		</div>
+        <div class="contact map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31876.821078011413!2d101.62815301516045!3d2.929976210962327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb6ee376a93e3%3A0x241ebbfb0b48bcce!2sCyberjaya%2C%20Selangor!5e0!3m2!1sen!2smy!4v1716724820001!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+	</div>
+    
+    <section id="associated-sites" class="section">
+        <div class="container-sites">
+    
+    
+          <h2>Linked Sites</h2>
+          <div class="associated-sites">
+            <a href="https://www.instagram.com/radiohead/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/radiohead" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/radiohead" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/channel/UCq19-LqvG35A-30oyAiPiqA" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb" target="_blank"><i class="fab fa-spotify"></i></a>
+          </div>
+    
+        </div>
+      </section>
+    
+      <footer>
+        <div class="container-sites">
+          <p>&copy; 2024 Radiohead. All rights reserved.</p>
+        </div>
+      </footer>	
+      <script>
+        let subMenu = document.getElementById("subMenu");
+    
+        function toggleMenu(){
+          subMenu.classList.toggle("open-menu");
+        }
+      </script>	
+</body>
+</html>

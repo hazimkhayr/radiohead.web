@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Checkout</title>
+	<link rel="stylesheet" href="checkout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+</head>
+<body>
+    <nav>
+      <div class="banner">
+        <div class="navibar">
+          <a href="index.html" ><img style =  "border-radius: 20%;" src="image/logo2.png" title="Radiohead" width="182px" height="90px" ></a> 
+        <ul>		
+              <li><a href="index.html">Home</a></li>
+              <li><a href="archive.html">Archive</a></li>
+              <li><a href="merch.html">Merchandise</a></li>
+              <li><a href="discography.html">Discography</a></li>
+            </ul>
+            <ul class="user">
+              <a href="carts.html"><img src="image/cart.png" title="Shopping Cart" width="45px" height="45px"></a>
+              <img src="image/profile.png" title="Your Profile" width="40px" height="40px" onclick="toggleMenu()">
+            </ul>
+            
+            <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="image/profile.png">
+                <h2>User</h2>
+              </div>
+              <hr>
+    
+              <a href="profile.html" class="sub-menu-link">
+              <img src="image/user.png">
+              <p>PROFILE & SETTINGS</p>
+              </a>
+                <a href="login.html" class="sub-menu-link">
+                  <img src="image/logout.png">
+                  <p>LOGOUT</p>
+                </a>
+              </hr>
+            </div>
+            </div>
+          </nav>  
+    <form class="form" onsubmit="return validateForm()">
+    <h1 class="heading">CHECKOUT</h1>
+    <p class="text">DELIVERY ADDRESS</p>
+    <input type="text" id="address" placeholder="Address">
+    <input type="text" id="street" placeholder="Street">
+    <div class="three-input-container">
+    <input type="text" id="city" placeholder="City">
+    <input type="text" id="state" placeholder="State">
+    <input type="text" id="postcode" placeholder="Postcode">
+    </div>
+    <input type="text" id="Landmark" placeholder="Landmark">
+</form>
+<header id="site-header">
+    <div class="container">
+      <h1>SHOPPING CART</h1>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <section id="cart">
+      <article class="product">
+        <header>
+          <a class="remove">
+            <img src="merch/shirt5.webp" alt="product-short-description">
+            <h3>REMOVE</h3>
+          </a>
+        </header>
+
+        <div class="contents">
+          <h1>EVRYTHING </h1>
+          Graphic Tee
+        </div>
+
+        <footer class="contents">
+          <span class="qt-minus">-</span>
+          <span class="qt">1</span>
+          <span class="qt-plus">+</span>
+
+          <h2 class="full-price">
+            RM 30.00
+          </h2>
+
+          <h2 class="price">
+            RM 30.00
+          </h2>
+        </footer>
+      </article>
+      <article class="product">
+        <header>
+          <a class="remove">
+            <img src="merch/hat2.jpeg" alt="product-short-description">
+            <h3>REMOVE</h3>
+          </a>
+        </header>
+
+        <div class="contents">
+          <h1>CITIZEN BLACK</h1>
+          Bucket Hat
+        </div>
+
+        <footer class="contents">
+          <span class="qt-minus">-</span>
+          <span class="qt">1</span>
+          <span class="qt-plus">+</span>
+
+          <h2 class="full-price">
+            RM 20.00
+          </h2>
+
+          <h2 class="price">
+            RM 20.00
+          </h2>
+        </footer>
+      </article>
+
+      <article class="product">
+        <header>
+          <a class="remove">
+            <img src="merch/socks.jpeg" alt="Keyboard">
+            <h3>REMOVE</h3>
+          </a>
+        </header>
+
+        <div class="contents">
+          <h1>Bear Socks</h1>
+          Socks 
+        </div>
+
+        <footer class="contents">
+          <span class="qt-minus">-</span>
+          <span class="qt">1</span>
+          <span class="qt-plus">+</span>
+
+          <h2 class="full-price">
+            RM 10.00
+          </h2>
+
+          <h2 class="price">
+            RM 10.00
+          </h2>
+        </footer>
+      </article>
+
+      <article class="product">
+        <header>
+          <a class="remove">
+            <img src="merch/vinyl1.webp" alt="Handfree">
+            <h3>REMOVE</h3>
+          </a>
+        </header>
+
+        <div class="contents">
+          <h1>OK COMPUTER</h1>
+          Vinyl
+        </div>
+
+        <footer class="contents">
+          <span class="qt-minus">-</span>
+          <span class="qt">1</span>
+          <span class="qt-plus">+</span>
+
+          <h2 class="full-price">
+            RM 100.00
+          </h2>
+
+          <h2 class="price">
+            RM 100.00
+          </h2>
+        </footer>
+      </article>
+    </section>
+  </div>
+
+  <footer id="site-footer">
+    <div class="container clearfix">
+      <div class="left">
+        <h2 class="subtotal">Subtotal: <span>RM 155.00</span></h2>
+        <h3 class="tax">Taxes (5%): <span>RM 7.75</span></h3>
+        <h3 class="shipping">Shipping: <span>RM 5.00</span></h3>
+      </div>
+
+      <div class="right">
+        <h1 class="total">Total: <span>RM 177.16</span></h1>
+        <a class="place-order-btn" href="payment.html">Place Order</a>
+      </div>
+    </div>
+  </footer>     
+  
+  <section id="associated-sites" class="section">
+    <div class="container-sites">
+
+
+        <h2>Linked Sites</h2>
+        <div class="associated-sites">
+          <a href="https://www.instagram.com/radiohead/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/radiohead" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/radiohead" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/channel/UCq19-LqvG35A-30oyAiPiqA" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+  
+
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container-sites">
+      <p>&copy; 2024 Radiohead. All rights reserved.</p>
+    </div>
+  </footer>	
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="carts.js"></script>
+  <script>
+    const placeOrderBtn = Document.querySelector('.place-order-btn');
+    placeOrderBtn.addEventListener('click', () => {
+        let address = getAddress();
+    });
+
+   const getAddress = () => {
+    let address = document.querySelector('#address').value;
+    let street = document.querySelector('#street').value;
+    let city = document.querySelector('#city').value;
+    let state = document.querySelector('#state').value;
+    let postcode = document.querySelector('#postcode').value;
+    let landmark = document.querySelector('#landmark').value;
+
+    if(!address.lenght || !street.lenght ||!city.lenght ||!state.lenght ||!postcode.lenght || !landmark.lenght){
+       return showAlert('fill all input first')
+    }
+       else{
+        return{address,street,city,state,postcode,landmark};
+       }
+   }
+</script>
+
+</body>

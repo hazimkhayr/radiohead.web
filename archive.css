@@ -1,0 +1,353 @@
+@font-face {
+    font-family: custom;
+    src: url(Wide.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: custom;
+    
+    }
+    body{
+        background  : linear-gradient(black, rgba(255, 0, 0, 0.799));
+        
+    }
+    
+    
+    .navibar{
+      width: 85%;
+      margin: auto;
+      padding: 31px ;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      }
+      
+      .navibar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 45px;
+      position: relative;
+      align-items: center;
+      
+      }
+      
+      .navibar ul li a{
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      
+      }
+      
+      .navibar ul li::after{
+      content:'';
+      height: 3px;
+      width: 0;
+      background: red;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.5s;
+      }
+      
+      .navibar ul li:hover::after{
+      width: 100%;
+      background: red;
+      position: absolute;
+      left: 0;
+      }
+    
+      .sub-menu-wrap{
+          position: absolute;
+          top: 10%;
+          right: 3%;
+          width: 230px;
+          max-height: 0px;
+          overflow: hidden;
+          transition: max-height 0.5s;
+          border-radius: 5%;
+          z-index: 5;
+      }
+      .sub-menu-wrap.open-menu{
+          max-height: 200px;
+          z-index: 5;
+      }
+      .sub-menu{
+          background: #fff;
+          padding: 20px;
+          margin: 10px;
+          z-index: 5;
+    
+      }
+      .user-info{
+          display: flex;
+          align-items:center;
+          background: white;
+          z-index: 5;
+      }
+      .user-info h2{
+          font-weight: 500;
+          background: white;
+          z-index: 5;
+      }
+      .user-info img{
+          width: 35px;
+          border-radius: 50%;
+          margin-right: 15px;
+          margin-bottom: 5px;
+          background: #ccc;
+          z-index: 5;
+      }
+      .user-info hr{
+          border: 0;
+          height: 1px;
+          width: 10%;
+          background: #ccc;
+          margin: 15px 0 10px;  
+          z-index: 5; 
+      }
+      .sub-menu-link{
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: black;
+          margin: 10px 0;
+          font-size: 10px;
+          background: white;
+          z-index: 5;
+      }
+      .sub-menu-link p{
+          width: 100%;
+          background: white;
+          z-index: 5;
+      }
+      .sub-menu-link img{
+          width: 30px;
+          background: #fff;
+          border-radius: 50%;
+          padding: 8px;
+          margin-right: 15px;
+          z-index: 5;
+      }
+    
+      .sub-menu-link:hover p{
+          font-weight: 600;
+          color: red;
+          z-index: 5;
+      } 
+    
+
+    .content{
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    }
+    
+    .content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    }
+    
+    .content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    }
+    
+    .product {
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+    }
+    
+    .product-category {
+      padding: 0 10vw;
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 40px;
+      text-transform: capitalize;
+      color : white;
+    }
+    
+    .product-container {
+      padding: 0 10vw;
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    
+    .product-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .product-card {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 450px;
+      margin-right: 40px;
+    }
+    
+    .product-image {
+      position: relative;
+      width: 100%;
+      height: 375px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    
+    .product-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+     
+    }
+    
+    .card-btn {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px;
+      width: 90%;
+      text-transform: capitalize;
+      border: none;
+      outline: none;
+      background: #fff;
+      border-radius: 5px;
+      transition: 0.5s;
+      cursor: pointer;
+      opacity: 0;
+    }
+    
+    .product-card:hover .card-btn {
+      opacity: 1;
+    }
+    
+    .card-btn:hover {
+      background: red;
+      color: #fff;
+    }
+    
+    .product-info {
+      width: 100%;
+      height: 95px;
+      padding-top: 10px;
+    }
+    
+    .product-brand {
+      text-transform: uppercase;
+      color : white;
+    }
+    
+    .product-short-description {
+      width: 100%;
+      height: 20px;
+      line-height: 20px;
+      overflow: hidden;
+      opacity: 0.5;
+      text-transform: capitalize;
+      margin: 5px 0;
+      color: white;
+    }
+    
+    .pre-btn,
+    .nxt-btn {
+      border: none;
+      width: 10vw;
+      height: 525px;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      cursor: pointer;
+      z-index: 8;
+      
+    }
+    
+    .pre-btn {
+      left: 0;
+      transform: rotate(180deg);
+    }
+    
+    .nxt-btn {
+      right: 0;
+    }
+    
+    .pre-btn img,
+    .nxt-btn img {
+      opacity: 1;
+      color: black;
+      
+    }
+    
+    .pre-btn:hover img,
+    .nxt-btn:hover img {
+      opacity: 1;
+      color: black;
+    }
+    
+    .collection-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+    
+    .collection {
+      position: relative;
+    }
+    
+    .collection img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .collection p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+      font-size: 50px;
+      text-transform: capitalize;
+    }
+    
+    .collection:nth-child(3) {
+      grid-column: span 2;
+      margin-bottom: 10px;
+    }
+    
+    .container-sites{
+    text-align: center;
+    font-size: 12px;
+    }
+    .associated-sites i {
+      color: #333;
+      font-size: 12px;
+      margin-right: 10px;
+      text-align: center;
+    }
+    .associated-sites {
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+    }
+    
+    .associated-sites a {
+      margin: 0 5px;
+    }
+    
+    
+    footer {
+      background-color: dark gray;
+      color: black;
+      padding: 10px 0;
+      text-align: center;
+    }

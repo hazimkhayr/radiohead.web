@@ -1,0 +1,279 @@
+@font-face {
+    font-family: custom;
+    src: url(Wide.ttf);
+}
+*{
+margin: 0;
+padding: 0;
+ font-family: custom;
+}
+
+.banner{
+	background: white;
+}
+
+.navibar{
+  width: 85%;
+  margin: auto;
+  padding: 31px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+  
+  .navibar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 45px;
+  position: relative;
+  align-items: center;
+  
+  }
+  
+  .navibar ul li a{
+  text-decoration: none;
+  color: red;
+  text-transform: uppercase;
+  
+  }
+  
+  .navibar ul li::after{
+  content:'';
+  height: 3px;
+  width: 0;
+  background: black;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+  }
+  
+  .navibar ul li:hover::after{
+  width: 100%;
+  background: black;
+  position: absolute;
+  left: 0;
+  }
+
+  .sub-menu-wrap{
+      position: absolute;
+      top: 10%;
+      right: 3%;
+      width: 230px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 0.5s;
+      border-radius: 5%; 
+  }
+  .sub-menu-wrap.open-menu{
+      max-height: 200px;
+  }
+  .sub-menu{
+      background: #fff;
+      padding: 20px;
+      margin: 10px;
+
+  }
+  .user-info{
+      display: flex;
+      align-items:center;
+      background: white;
+  }
+  .user-info h2{
+      font-weight: 500;
+      background: white;
+  }
+  .user-info img{
+      width: 35px;
+      border-radius: 50%;
+      margin-right: 15px;
+      margin-bottom: 5px;
+      background: #ccc;
+  }
+  .user-info hr{
+      border: 0;
+      height: 1px;
+      width: 10%;
+      background: #ccc;
+      margin: 15px 0 10px;   
+  }
+  .sub-menu-link{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: black;
+      margin: 10px 0;
+      font-size: 10px;
+      background: white;
+  }
+  .sub-menu-link p{
+      width: 100%;
+      background: white;
+  }
+  .sub-menu-link img{
+      width: 30px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 8px;
+      margin-right: 15px;
+  }
+
+  .sub-menu-link:hover p{
+      font-weight: 600;
+      color: red;
+
+  }
+
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: custom;  
+  font-size: 16px; 
+}
+body::before {
+  content: '';
+  position:fixed;
+  
+  top: 20%;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background-image: url('image/bg2.jpeg');
+  background-repeat: no-repeat;
+  opacity: 0.10;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+} 
+
+header {
+  background-color: rgba(255, 0, 0, 0);
+  color: red;
+  padding: 10px 0;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 100px; 
+  height: auto; 
+  border-radius: 50%;
+}
+
+
+.logo h1 {
+  font-size: 24px;
+}
+
+.menu {
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.menu ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu ul li a {
+  color: red;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 24%;
+  margin-right: 20px;
+}
+
+.member-info h3 {
+  margin-bottom: 10px;
+}
+
+.album {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.album img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+.album-info h3 {
+  margin-bottom: 10px;
+}
+
+.album-features {
+  flex-grow: 1;
+  right: 20%;
+}
+.associated-sites i {
+  color: red;
+  font-size: 24px;
+  margin-right: 10px;
+  text-align: center;
+}
+.associated-sites {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.associated-sites h2{
+    color: grey;
+  }
+
+.associated-sites a {
+  margin: 0 5px;
+}
+
+
+footer {
+  color: red;
+  padding: 10px 0;
+  text-align: center;
+}

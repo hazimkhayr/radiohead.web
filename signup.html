@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="signup.css">
+	<link rel="icon" type="image/x-icon" href="icon.ico">
+
+</head>
+<body>
+    <div class="backg">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="videos/Radiohead - I Might Be Wrong.mp4" type="video/mp4">
+        </video>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="user()">User</button>
+                <button type="button" class="toggle-btn" onclick="admin()">Admin</button>
+            </div>
+            <div class="logo-pict">
+                <img src="image/lgn.png">
+            </div>
+            <form id="user" class="input-group">
+                <input type="text" class="input-field" placeholder="User Id" id="userId" required>
+                <input type="email" class="input-field" placeholder="User Email" id="useremail" required>
+                <input type="password" class="input-field" placeholder="Enter Password" id="userPassword" required>
+                <p>
+                    <input type="radio" class="rad" name="Gender" value="male" required/>Male
+                    <input type="radio" class="rad" name="Gender" value="female" required/>Female
+                </p>
+                <button type="submit" class="signup-btn" formaction="login.html">Register</button>
+                <br/>
+                <p><a href="login.html">Back to log in</a></p>
+            </form>
+            <form id="admin" class="input-group">
+                <input type="text" class="input-field" placeholder="Admin Id" id="adminId" required>
+                <input type="email" class="input-field" placeholder="Admin Email" id="adminemail" required>
+                <input type="password" class="input-field" placeholder="Enter Password" id="adminpassword" required>
+                <p>
+                    <input type="radio" class="rad" name="Gender" value="male" required>Male
+                    <input type="radio" class="rad" name="Gender" value="female" required>Female
+                </p>
+                <button type="submit" class="signup-btn" formaction="login.html">Register</button>
+                <br/>
+                <p><a href="login.html">Back to log in</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("user");
+        var y = document.getElementById("admin");
+        var z = document.getElementById("btn");
+
+        function admin(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function user(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+		
+		 function validateForm() {
+            var userId = document.getElementById("userId").value;
+            var userPassword = document.getElementById("userPassword").value;
+            var adminId = document.getElementById("adminId").value;
+            var adminPassword = document.getElementById("adminPassword").value;
+			var adminemail = document.getElementById("adminemail").value;
+            var adminemail = document.getElementById("useremail").value;
+
+
+            if ((userId === "" || userPassword === "" || useremail === "") && (adminId === "" || adminPassword === "" || adminemail === "")) {
+                alert("Please fill in all the required fields.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

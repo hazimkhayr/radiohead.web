@@ -1,0 +1,147 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+
+body {
+	min-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+li {
+	list-style: none;
+}
+.brand-name h1{
+	color: white;
+  }
+h1, h2 {
+	color: #444;
+	margin: 10px;
+}
+h3 {
+	color: #999;
+}
+.btn {
+	padding: 5px 10px;
+	text-align: center;
+}
+.btn:hover {
+	color: white;
+	padding: 3px 8px;
+	border: 2px solid ;
+}
+
+.side-menu {
+	position: fixed;
+	background: #1c1c1c;
+	width: 20%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.side-menu .brand-name {
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.side-menu li {
+	font-size: 24px;
+	padding: 10px 40px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.side-menu li:hover {
+	background: #4c4c4c;
+	color: #009688;
+}
+.container {
+	position: absolute;
+	right: 0;
+	width: 80%;
+	height: 100%;
+	background: #f1f1f1;
+}
+.container .header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 80%;
+	height: 10%;
+	background: #6d6d6d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.container .header .nav{
+	width: 90%;
+	display: flex;
+	align-items: center;
+}
+.container .header .nav .search {
+	flex: 3;
+	display: flex;
+	justify-content: center;
+}
+.container .header .nav .search input[type="text"]{
+	border: none;
+	background: #f1f1f1;
+	padding: 10px;
+	width: 50%;
+}
+.container .header .nav .search button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container .header .nav .search button img {
+	width: 30px;
+	height: 30px;
+	
+}
+.container .content{
+	position: fixed;
+	margin-top: 10vh;
+	min-height: 90%;
+}
+.container .content .cards {
+	padding: 20px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.container .content .cards .card {
+	width: 250px;
+	height: 150px;
+	background: white;
+	margin: 20px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 0 4px 8px 0;
+}
+.container .content .content-2 {
+	align-items: flex-start;
+	min-height: 60%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.container .content .content-2 .view {
+	margin: 0 25px 25px 25px;
+	flex: 5;
+	min-height: 50vh;
+	background: white;
+}

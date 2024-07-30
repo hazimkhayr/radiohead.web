@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+  <title>Kid A Details</title>
+
+  <link rel="stylesheet" href="shirtdec.css">
+
+  
+</head>
+
+<body>
+
+  <section class = "head">
+<nav>
+    <div class="banner">
+      <div class="navibar">
+        <a href="index.html" ><img style =  "border-radius: 20%;" src="image/logo2.png" title="Radiohead" width="182px" height="90px" ></a> 
+      <ul>		
+            <li><a href="index.html">Home</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="merch.html">Merchandise</a></li>
+            <li><a href="discography.html">Discography</a></li>
+          </ul>
+          <ul class="user">
+            <a href="carts.html"><img src="image/cart.png" title="Shopping Cart" width="45px" height="45px"></a>
+            <img src="image/profile.png" title="Your Profile" width="40px" height="40px" onclick="toggleMenu()">
+          </ul>
+          
+          <div class="sub-menu-wrap" id="subMenu">
+          <div class="sub-menu">
+            <div class="user-info">
+              <img src="image/profile.png">
+              <h2>User</h2>
+            </div>
+            <hr>
+  
+            <a href="profile.html" class="sub-menu-link">
+            <img src="image/user.png">
+            <p>PROFILE & SETTINGS</p>
+            </a>
+              <a href="login.html" class="sub-menu-link">
+                <img src="image/logout.png">
+                <p>LOGOUT</p>
+              </a>
+            </hr>
+          </div>
+          </div>
+        </nav>
+</section>
+
+  
+  <main>
+    <article>
+      <section class="section product" aria-label="product">
+        <div class="container">
+            
+          <div class="product-slides">
+            <div class="category-container">
+                <ul class="category-list">
+                    <a href="vinyl.html "><li type = "none" style="color: red;" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='red'">B A C K</li></a>
+                </ul>
+            </div>
+            <div class="slider-banner" data-slider>
+              <figure class="product-banner">
+                <img src="merch/vinyl4.webp" width="600" height="600" loading="lazy" alt="Nike Sneaker"
+                  class="img-cover">
+              </figure>
+
+            </div>
+
+           
+            
+
+          </div>
+
+          <div class="product-content">
+
+            <p class="product-subtitle">Radiohead MERCHANDISE</p>
+
+            <h1 class="h1 product-title">KID A</h1>
+
+            <p class="product-text">
+                VINYL
+            </p>
+
+            <div class="wrapper">
+
+              <span class="price" data-total-price>RM100.00</span>
+
+
+            </div>
+
+
+            <div class="btn-group">
+
+              <div class="counter-wrapper">
+
+                <button class="counter-btn" data-qty-minus>
+                  <ion-icon name="remove-outline"></ion-icon>
+                </button>
+
+                <span class="span" data-qty>1</span>
+
+                <button class="counter-btn" data-qty-plus>
+                  <ion-icon name="add-outline"></ion-icon>
+                </button>
+
+              </div>
+			  
+			  <form>
+              <button type="submit" class="cart-btn" formaction="carts.html" >
+			  </form>
+                <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                <span class="span">Add to cart</span>
+              </button>
+            </div>
+
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+  <section class="product"> 
+        <h2 class="product-category">Vinyl</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="merch/vinyl1.webp" class="product-thumb" alt="">
+					<form >
+                    <button type= "submit" class="card-btn" formaction= "vinyl1.html">Buy Now</button>
+					</form>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="merch/viynl2.webp" class="product-thumb" alt="">
+					<form>
+                    <button type= "submit" class="card-btn" formaction= "vinyl2.html">Buy Now</button>
+					</form>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="merch/vinyl3.jpeg" class="product-thumb" alt="">
+					<form>
+                    <button type= "submit" class="card-btn" formaction= "vinyl3.html">Buy Now</button>
+					</form>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="merch/vinyl5.webp" class="product-thumb" alt="">
+					<form>
+                    <button type= "submit" class="card-btn" formaction= "vinyl5.html">Buy Now</button>
+					</form>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="merch/vinyl6.webp" class="product-thumb" alt="">
+					<form>
+                    <button type= "submit" class="card-btn" formaction= "vinyl6.html">Buy Now</button>
+					</form>
+                </div>
+            </div>
+			</section>
+  <section  class="comrate">
+<div class="wrapper">
+		<h3>RATE AND WRITE YOUR FEEDBACKS HERE</h3>
+		<form action="#">
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group">
+        <button style="color: white; background: red;" type="submit" class="btn submit">Submit</button>
+				<button style="color: red;" class="btn-cancel">Cancel</button>
+			</div>
+		</form>
+	</div>
+
+</section>
+<section id="associated-sites" class="section">
+    <div class="container-sites">
+
+
+      <h2>Linked Sites</h2>
+      <div class="associated-sites">
+        <a href="https://www.instagram.com/radiohead/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/radiohead" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/radiohead" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UCq19-LqvG35A-30oyAiPiqA" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb" target="_blank"><i class="fab fa-spotify"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container-sites">
+      <p>&copy; 2024 Radiohead. All rights reserved.</p>
+    </div>
+  </footer>	
+  <script>
+    let subMenu = document.getElementById("subMenu");
+
+    function toggleMenu(){
+      subMenu.classList.toggle("open-menu");
+    }
+  </script>	
+  <script src="vinyl.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

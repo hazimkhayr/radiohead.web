@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Sales Report</title>
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+
+  <style>
+    * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+
+body {
+	min-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+li {
+	list-style: none;
+}
+.brand-name h1{
+	color: white;
+  }
+h1, h2 {
+	color: #444;
+	margin: 10px;
+}
+h3 {
+	color: #999;
+}
+.btn {
+	padding: 5px 10px;
+	text-align: center;
+}
+.btn:hover {
+	color: white;
+	padding: 3px 8px;
+	border: 2px solid ;
+}
+
+.side-menu {
+	position: fixed;
+	background: #1c1c1c;
+	width: 20%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.side-menu .brand-name {
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.side-menu li {
+	font-size: 24px;
+	padding: 10px 40px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.side-menu li:hover {
+	background: #4c4c4c;
+	color: #009688;
+}
+.container {
+	position: absolute;
+	right: 0;
+	width: 80%;
+	height: 100%;
+	background: #f1f1f1;
+}
+.container .header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 80%;
+	height: 10%;
+	background: #6d6d6d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.container .header .nav{
+	width: 90%;
+	display: flex;
+	align-items: center;
+}
+.container .header .nav .search {
+	flex: 3;
+	display: flex;
+	justify-content: center;
+}
+.container .header .nav .search input[type="text"]{
+	border: none;
+	background: #f1f1f1;
+	padding: 10px;
+	width: 50%;
+}
+.container .header .nav .search button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container .header .nav .search button img {
+	width: 30px;
+	height: 30px;
+	
+}
+.container .content{
+	margin-top: 10vh;
+	min-height: 90%;
+}
+.container .content .cards {
+	padding: 20px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.container .content .cards .card {
+	width: 250px;
+	height: 150px;
+	background: white;
+	margin: 20px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 0 4px 8px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: white;
+}
+
+.button-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #45a049;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-container input[type=text], .form-container input[type=email] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: black;
+  color: #fff;
+}
+
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: black;
+  color: #fff;
+}
+
+.form-container button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-container button[type=submit], .form-container button[type=cancel] {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button[type=submit]:hover, .form-container button[type=cancel]:hover {
+  background-color: #45a049;
+}
+  </style>
+</head>
+<body>
+  <body>
+    <div class="side-menu">
+      <div class="brand-name">
+        <h1>Admin Dashboard</h1>
+      </div>
+      <ul>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="member.html">Member</a></li>
+        <li><a href="product_category.html">Product Category</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="orders.html">Order</a></li>
+        <li><a href="SalesReport.html">Print Sales</a></li>
+        <li><ion-icon name="log-out-outline"></ion-icon><a href="login.html">&nbsp;Logout</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="header">
+        <div class="nav">
+          <div class="search">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content">
+        <div class="cards">
+          <div class="card">
+            <div class="box">
+              <h1>825</h1>
+                <h3>Staff</h3>
+            </div>
+            <div class="icon-case">
+              <ion-icon name="add-circle-outline"></ion-icon>
+            </div>
+          </div>
+            
+          <div class="card">
+            <div class="box">
+              <h1>653,974</h1>
+              <h3>Merchandise</h3>
+            </div>
+            <div class="icon-case">
+              <ion-icon name="add-circle-outline"></ion-icon>
+            </div>
+          </div>
+            
+          <div class="card">
+            <div class="box">
+              <h1>892,107</h1>
+              <h3>Tickets</h3>
+            </div>
+            <div class="icon-case">
+              <ion-icon name="add-circle-outline"></ion-icon>
+            </div>
+          </div>
+            
+          <div class="card">
+            <div class="box">
+              <h1>3,958</h1>
+              <h3>Students</h3>
+            </div>
+            <div class="icon-case">
+              <ion-icon name="add-circle-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+  <h1>View Sales Report</h1>
+  <div class="button-container">
+    <button onclick="generateSalesReport()">Generate Report</button>
+  </div>
+  <table id="salesTable">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer Name</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="salesReportBody">
+    </tbody>
+  </table>
+  <div id="editForm" class="form-container" style="display: none;">
+    <h2>Edit Sales Record</h2>
+    <form onsubmit="updateSalesRecord(event)">
+      <input type="text" id="editOrderId" placeholder="Order ID" required>
+      <input type="text" id="editCustomerName" placeholder="Customer Name" required>
+      <input type="text" id="editProductName" placeholder="Product Name" required>
+      <input type="number" id="editQuantity" placeholder="Quantity" required>
+      <input type="number" id="editPrice" placeholder="Price" required>
+      <input type="hidden" id="recordId">
+      <br>
+      <button type="submit">Update</button>
+      <button type="button" onclick="cancelEditForm()">Cancel</button>
+    </form>
+  </div>
+  <script>
+    let orderData = [
+      { id: 1, orderId: "3001", customerName: "Batman Bin Superman", productName: "Product A", quantity: 2, price: 10.0 },
+      { id: 2, orderId: "3002", customerName: "Gojo Satoru", productName: "Product B", quantity: 1, price: 15.0 },
+      { id: 3, orderId: "3003", customerName: "Michael (Mike) OxLong", productName: "Product A", quantity: 3, price: 10.0 },
+      { id: 4, orderId: "3004", customerName: "Sadie Enward", productName: "Product C", quantity: 2, price: 20.0 },
+      { id: 5, orderId: "3005", customerName: "Busuk Bin Masam", productName: "Product B", quantity: 1, price: 15.0 }
+    ];
+
+    function renderTable() {
+      const salesReportBody = document.getElementById("salesReportBody");
+      salesReportBody.innerHTML = "";
+
+      let totalSales = 0;
+
+      orderData.forEach(record => {
+        const row = salesReportBody.insertRow();
+        const orderIdCell = row.insertCell();
+        orderIdCell.textContent = record.orderId;
+        const customerNameCell = row.insertCell();
+        customerNameCell.textContent = record.customerName;
+        const productNameCell = row.insertCell();
+        productNameCell.textContent = record.productName;
+        const quantityCell = row.insertCell();
+        quantityCell.textContent = record.quantity;
+        const priceCell = row.insertCell();
+        priceCell.textContent = "$" + record.price.toFixed(2);
+        const totalCell = row.insertCell();
+        const total = record.quantity * record.price;
+        totalCell.textContent = "$" + total.toFixed(2);
+        totalSales += total;
+        const actionsCell = row.insertCell();
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.onclick = () => editSalesRecord(record.id);
+        actionsCell.appendChild(editButton);
+      });
+
+      const totalRow = salesReportBody.insertRow();
+      const totalSalesCell = totalRow.insertCell();
+      totalSalesCell.colSpan = 6;
+      totalSalesCell.textContent = "Total Sales";
+      const totalAmountCell = totalRow.insertCell();
+      totalAmountCell.textContent = "$" + totalSales.toFixed(2);
+    }
+
+    function generateSalesReport() {
+      renderTable();
+    }
+
+    function editSalesRecord(id) {
+      const record = orderData.find(record => record.id === id);
+      if (record) {
+        document.getElementById("editForm").style.display = "block";
+        document.getElementById("editOrderId").value = record.orderId;
+        document.getElementById("editCustomerName").value = record.customerName;
+        document.getElementById("editProductName").value = record.productName;
+        document.getElementById("editQuantity").value = record.quantity;
+        document.getElementById("editPrice").value = record.price;
+        document.getElementById("recordId").value = record.id;
+      }
+    }
+
+    function cancelEditForm() {
+      document.getElementById("editForm").style.display = "none";
+      document.getElementById("editOrderId").value = "";
+      document.getElementById("editCustomerName").value = "";
+      document.getElementById("editProductName").value = "";
+      document.getElementById("editQuantity").value = "";
+      document.getElementById("editPrice").value = "";
+      document.getElementById("recordId").value = "";
+    }
+
+    function updateSalesRecord(event) {
+      event.preventDefault();
+      const orderId = document.getElementById("editOrderId").value;
+      const customerName = document.getElementById("editCustomerName").value;
+      const productName = document.getElementById("editProductName").value;
+      const quantity = document.getElementById("editQuantity").value;
+      const price = document.getElementById("editPrice").value;
+      const id = document.getElementById("recordId").value;
+      const record = orderData.find(record => record.id === parseInt(id));
+      if (record) {
+        record.orderId = orderId;
+        record.customerName = customerName;
+        record.productName = productName;
+        record.quantity = quantity;
+        record.price = price;
+        renderTable();
+        cancelEditForm();
+      }
+    }
+  </script>
+</body>
+</html>

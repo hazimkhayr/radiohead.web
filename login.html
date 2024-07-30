@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+</head>
+<body>
+    <div class="backg">
+        <video autoplay loop muted plays-inline class="background-clip">
+            <source src="videos/Radiohead - In Limbo (Live at Air Studios, September 2000).mp4" type="video/mp4">
+        </video>
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="user()">User</button>
+                <button type="button" class="toggle-btn" onclick="admin()">Admin</button>
+            </div>
+             <div class="logo-pict">
+                <img src="image/lgn.png">
+             </div>
+            <form id="user" class="input-group" onsubmit="return validateForm()">
+                <input type="text" class="input-field" placeholder="Username" id="userId" required>
+                <input type="password" class="input-field" placeholder="Enter Password" id="userPassword" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="login-btn" formaction="index.html">Log in</button>
+                <br/>
+                <p><a href="signup.html">Don't have an account? Sign up here</a></p>
+            </form>
+            <form id="admin" class="input-group" onsubmit="return validateForm()">
+                <input type="text" class="input-field" placeholder="Admin Id" id="adminId" required>
+                <input type="password" class="input-field" placeholder="Enter Password" id="adminPassword" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="login-btn" formaction="admindashboard.html">Log in</button>
+                <br/>
+                <p><a href="signup.html">Don't have an account? Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("user");
+        var y = document.getElementById("admin");
+        var z = document.getElementById("btn");
+
+        function admin(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function user(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+        function validateForm() {
+            var userId = document.getElementById("userId").value;
+            var userPassword = document.getElementById("userPassword").value;
+            var adminId = document.getElementById("adminId").value;
+            var adminPassword = document.getElementById("adminPassword").value;
+
+            if ((userId === "" || userPassword === "") && (adminId === "" || adminPassword === "")) {
+                alert("Please fill in all the required fields.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manage Product Category</title>
+  <link rel="icon" type="image/x-icon" href="icon.ico">
+
+  <style>
+   * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial;
+}
+
+body {
+	min-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+li {
+	list-style: none;
+}
+.brand-name h1{
+	color: white;
+  }
+h1, h2 {
+	color: #444;
+	margin: 10px;
+}
+h3 {
+	color: #999;
+}
+.btn {
+	padding: 5px 10px;
+	text-align: center;
+}
+.btn:hover {
+	color: white;
+	padding: 3px 8px;
+	border: 2px solid ;
+}
+
+.side-menu {
+	position: fixed;
+	background: #1c1c1c;
+	width: 20%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.side-menu .brand-name {
+	height: 10%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.side-menu li {
+	font-size: 24px;
+	padding: 10px 40px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.side-menu li:hover {
+	background: #4c4c4c;
+	color: #009688;
+}
+.container {
+	position: absolute;
+	right: 0;
+	width: 80%;
+	height: 100%;
+	background: #f1f1f1;
+}
+.container .header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 80%;
+	height: 10%;
+	background: #6d6d6d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.container .header .nav{
+	width: 90%;
+	display: flex;
+	align-items: center;
+}
+.container .header .nav .search {
+	flex: 3;
+	display: flex;
+	justify-content: center;
+}
+.container .header .nav .search input[type="text"]{
+	border: none;
+	background: #f1f1f1;
+	padding: 10px;
+	width: 50%;
+}
+.container .header .nav .search button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container .header .nav .search button img {
+	width: 30px;
+	height: 30px;
+	
+}
+.container .content{
+	margin-top: 10vh;
+	min-height: 90%;
+}
+.container .content .cards {
+	padding: 20px 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.container .content .cards .card {
+	width: 250px;
+	height: 150px;
+	background: white;
+	margin: 20px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	box-shadow: 0 4px 8px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: white;
+}
+
+.button-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #45a049;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-container input[type=text], .form-container input[type=email] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: black;
+  color: #fff;
+}
+
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: black;
+  color: #fff;
+}
+
+.form-container button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.form-container button[type=submit], .form-container button[type=cancel] {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button[type=submit]:hover, .form-container button[type=cancel]:hover {
+  background-color: #45a049;
+}
+  </style>
+</head>
+<body>
+  <div class="side-menu">
+		<div class="brand-name">
+			<h1>Admin Dashboard</h1>
+		</div>
+		<ul>
+			<li><a href="staff.html">Staff</a></li>
+			<li><a href="member.html">Member</a></li>
+			<li><a href="product_category.html">Product Category</a></li>
+			<li><a href="product.html">Product</a></li>
+			<li><a href="orders.html">Order</a></li>
+			<li><a href="SalesReport.html">Print Sales</a></li>
+			<li><ion-icon name="log-out-outline"></ion-icon><a href="login.html">&nbsp;Logout</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="header">
+			<div class="nav">
+				<div class="search">
+					<input type="text" placeholder="Search...">
+					<button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="cards">
+				<div class="card">
+					<div class="box">
+						<h1>825</h1>
+							<h3>Staff</h3>
+					</div>
+					<div class="icon-case">
+						<ion-icon name="add-circle-outline"></ion-icon>
+					</div>
+				</div>
+					
+				<div class="card">
+					<div class="box">
+						<h1>653,974</h1>
+						<h3>Merchandise</h3>
+					</div>
+					<div class="icon-case">
+						<ion-icon name="add-circle-outline"></ion-icon>
+					</div>
+				</div>
+					
+				<div class="card">
+					<div class="box">
+						<h1>892,107</h1>
+						<h3>Tickets</h3>
+					</div>
+					<div class="icon-case">
+						<ion-icon name="add-circle-outline"></ion-icon>
+					</div>
+				</div>
+					
+				<div class="card">
+					<div class="box">
+						<h1>3,958</h1>
+						<h3>Students</h3>
+					</div>
+					<div class="icon-case">
+						<ion-icon name="add-circle-outline"></ion-icon>
+					</div>
+				</div>
+			</div>
+  <h1>Manage Product Category</h1>
+  <div class="button-container">
+    <button onclick="showAddForm()">Add Category</button>
+  </div>
+  <table id="categoryTable">
+    <thead>
+      <tr>
+        <th>Category ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+      <tbody>
+      <tr>
+        <td>4</td>
+        <td>Books</td>
+        <td>Books and literature</td>
+        <td>
+          <button onclick="editCategory(4)">Edit</button>
+          <button onclick="deleteCategory(4)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div id="addForm" class="form-container" style="display: none;">
+    <h2>Add Category</h2>
+    <form onsubmit="addCategory(event)">
+      <input type="text" id="categoryId" placeholder="Category ID" required>
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="text" id="description" placeholder="Description" required>
+      <br>
+      <button type="submit">Add</button>
+      <button type="button" onclick="cancelAddForm()">Cancel</button>
+    </form>
+  </div>
+  <div id="editForm" class="form-container" style="display: none;">
+    <h2>Edit Category</h2>
+    <form onsubmit="updateCategory(event)">
+      <input type="text" id="editCategoryId" placeholder="Category ID" required>
+      <input type="text" id="editName" placeholder="Name" required>
+      <input type="text" id="editDescription" placeholder="Description" required>
+      <input type="hidden" id="categoryId">
+      <br>
+      <button type="submit">Update</button>
+      <button type="button" onclick="cancelEditForm()">Cancel</button>
+    </form>
+  </div>
+  <script>
+    let categoryData = [
+      { id: 1, categoryId: "1", name: "Guitar", description: "Musical Instrument" }
+    ];
+
+    function renderTable() {
+      const tableBody = document.getElementById("categoryTable").getElementsByTagName("tbody")[0];
+      tableBody.innerHTML = "";
+
+      categoryData.forEach(category => {
+        const row = tableBody.insertRow();
+        const categoryIdCell = row.insertCell();
+        categoryIdCell.textContent = category.categoryId;
+        const nameCell = row.insertCell();
+        nameCell.textContent = category.name;
+        const descriptionCell = row.insertCell();
+        descriptionCell.textContent = category.description;
+        const actionsCell = row.insertCell();
+        const editButton = document.createElement("button");
+        editButton.textContent = "Edit";
+        editButton.onclick = () => editCategory(category.id);
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = () => deleteCategory(category.id);
+        actionsCell.appendChild(editButton);
+        actionsCell.appendChild(deleteButton);
+      });
+    }
+
+    function showAddForm() {
+      document.getElementById("addForm").style.display = "block";
+    }
+
+    function cancelAddForm() {
+      document.getElementById("addForm").style.display = "none";
+      document.getElementById("categoryId").value = "";
+      document.getElementById("name").value = "";
+      document.getElementById("description").value = "";
+    }
+
+    function addCategory(event) {
+      event.preventDefault();
+      const categoryId = document.getElementById("categoryId").value;
+      const name = document.getElementById("name").value;
+      const description = document.getElementById("description").value;
+      const id = categoryData.length + 1;
+      categoryData.push({ id, categoryId, name, description });
+      renderTable();
+      cancelAddForm();
+    }
+
+    function editCategory(id) {
+      const category = categoryData.find(category => category.id === id);
+      if (category) {
+        document.getElementById("editForm").style.display = "block";
+        document.getElementById("editCategoryId").value = category.categoryId;
+        document.getElementById("editName").value = category.name;
+        document.getElementById("editDescription").value = category.description;
+        document.getElementById("categoryId").value = category.id;
+      }
+    }
+
+    function cancelEditForm() {
+      document.getElementById("editForm").style.display = "none";
+      document.getElementById("editCategoryId").value = "";
+      document.getElementById("editName").value = "";
+      document.getElementById("editDescription").value = "";
+      document.getElementById("categoryId").value = "";
+    }
+
+    function updateCategory(event) {
+      event.preventDefault();
+      const categoryId = document.getElementById("editCategoryId").value;
+      const name = document.getElementById("editName").value;
+      const description = document.getElementById("editDescription").value;
+      const id = document.getElementById("categoryId").value;
+      const category = categoryData.find(category => category.id === parseInt(id));
+      if (category) {
+        category.categoryId = categoryId;
+        category.name = name;
+        category.description = description;
+        renderTable();
+        cancelEditForm();
+      }
+    }
+
+    function deleteCategory(id) {
+      const index = categoryData.findIndex(category => category.id === id);
+      if (index > -1) {
+        categoryData.splice(index, 1);
+        renderTable();
+      }
+    }
+
+    
+    renderTable();
+  </script>
+</body>
+</html>

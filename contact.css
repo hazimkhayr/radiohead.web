@@ -1,0 +1,339 @@
+@font-face {
+    font-family: custom;
+    src: url(Wide.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: custom;
+    
+    }
+
+.navibar{
+    width: 85%;
+    margin: auto;
+    padding: 31px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    
+    .navibar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 45px;
+    position: relative;
+    align-items: center;
+    
+    }
+    
+    .navibar ul li a{
+    text-decoration: none;
+    color: red;
+    text-transform: uppercase;
+    
+    }
+    
+    .navibar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    }
+    
+    .navibar ul li:hover::after{
+    width: 100%;
+    background: black;
+    position: absolute;
+    left: 0;
+    }
+  
+    .sub-menu-wrap{
+        position: absolute;
+        top: 10%;
+        right: 3%;
+        width: 230px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        border-radius: 5%;
+        z-index: 5;
+    }
+    .sub-menu-wrap.open-menu{
+        max-height: 200px;
+        z-index: 5;
+    }
+    .sub-menu{
+        background: #fff;
+        padding: 20px;
+        margin: 10px;
+        z-index: 5;
+  
+    }
+    .user-info{
+        display: flex;
+        align-items:center;
+        background: white;
+        z-index: 5;
+    }
+    .user-info h2{
+        font-weight: 500;
+        background: white;
+        z-index: 5;
+    }
+    .user-info img{
+        width: 35px;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-bottom: 5px;
+        background: #ccc;
+        z-index: 5;
+    }
+    .user-info hr{
+        border: 0;
+        height: 1px;
+        width: 10%;
+        background: #ccc;
+        margin: 15px 0 10px;  
+        z-index: 5; 
+    }
+    .sub-menu-link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        margin: 10px 0;
+        font-size: 10px;
+        background: white;
+        z-index: 5;
+    }
+    .sub-menu-link p{
+        width: 100%;
+        background: white;
+        z-index: 5;
+    }
+    .sub-menu-link img{
+        width: 30px;
+        background: #fff;
+        border-radius: 50%;
+        padding: 8px;
+        margin-right: 15px;
+        z-index: 5;
+    }
+  
+    .sub-menu-link:hover p{
+        font-weight: 600;
+        color: red;
+        z-index: 5;
+    }
+
+.contactus {
+	position: relative;
+	width: 90%;
+	padding: 40px 100px;
+}
+.contactus .title {
+	display: flex;
+	font-size: 2em;
+}
+.contactus .title h2 {
+	color: red;
+	font-weight: 500;
+    float: left;
+}
+ .form {
+	grid-area: form;
+}
+.info {
+	grid-area: info;
+}
+.map {
+	grid-area: map;
+}
+.contact {
+	padding: 40px;
+	background: #fff;
+	box-shadow: 0 5px 35px rgba(0,0,0,0.15);
+    height: 500px;
+}
+.box {
+	position:relative;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 5fr 0fr;
+	grid-template-areas:"form info" "form map";
+	grid-gap: 20px;
+	margin-top: 20px;
+	margin: auto;
+}
+.contact h3{
+	color: red;
+	font-weight: 500;
+	font-size: 1.4em;
+	margin-bottom: 10px;
+}
+
+/* form */
+.formbox
+{
+	position: relative;
+	width: 100%;
+}
+.formBox .row50 
+{
+	display: flex;
+	gap: 20px;
+}
+.inputBox
+{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	width: 50%;
+}
+.formBox .row100 .inputBox 
+{
+	width: 100%;
+}
+.inputBox span 
+{
+	color: darkred;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+.inputBox input 
+{
+	padding: 10px;
+	font-size: 1.1em;
+	outline: none;
+	border: 1px solid #333;
+}
+.inputBox textarea 
+{
+	padding: 10px;
+	font-size: 1.1em;
+	outline: none;
+	border: 1px solid #333;
+	resize: none;
+	min-height: 220px;
+	margin-bottom: 10px;
+}
+.inputBox input[type="submit"]
+{
+	background: darkred;
+	color: #fff;
+	border: none;
+	font-size: 1.1em;
+	max-width: 120px;
+	font-weight: 500;
+	cursor: pointer;
+	padding: 14px 15px;
+}
+.inputBox::placeholder
+{
+	color: #999;
+}
+/*FORM*/
+.info
+{
+	background: grey;
+}
+.info h3 {
+	color: #fff;
+}
+.info .infoBox div 
+{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.info .infoBox div span {
+	min-width: 40px;
+	height: 40px;
+	color: #fff;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+.info .infoBox div p
+{
+	color: #fff;
+	font-size: 1.1em;
+}
+.info .infoBox div a
+{
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.1em;
+}
+.sci 
+{
+	margin-top: 40px;
+	display: flex;
+}
+.sci li
+{
+	list-style: none;
+	margin-right: 15px;
+}
+.sci i
+{
+	color: darkgray;
+	font-size: 2em;
+}
+.sci li a:hover
+{
+	color: #fff;
+}
+.map
+{
+	padding: 0;
+}
+.map iframe
+{
+	width: 100%;
+	height: 100%;
+}
+.container h2{
+	text-align:center;
+}
+
+.container-sites{
+    text-align: center;
+    font-size: 12px;
+    color: red;
+    
+    }
+    .associated-sites i {
+        color: red;
+        font-size: 12px;
+        margin-right: 10px;
+        text-align: center;
+        margin-top: 5px;
+      }
+      .associated-sites {
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+      }
+      
+      .associated-sites a {
+        margin: 0 5px;
+      }
+      
+      
+      footer {
+        background-color: dark gray;
+        color: red  ;
+        padding: 10px 0;
+        text-align: center;
+      }

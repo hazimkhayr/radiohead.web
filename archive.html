@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+
+    <link rel="stylesheet" href="archive.css">
+    <title>Archive</title>
+</head>
+
+<body>
+<div class = "banner">
+    <div class="navibar">
+        <a href="index.html" ><img style =  "border-radius: 20%;" src="image/logo.png" title="Radiohead" width="182px" height="90px" ></a> 
+          <ul>		
+            <li><a href="index.html">Home</a></li>
+            <li><a href="archive.html">Archive</a></li>
+            <li><a href="merch.html">Merchandise</a></li>
+            <li><a href="discography.html">Discography</a></li>
+          </ul>
+          <ul class="user">
+            <a href="carts.html"><img src="image/cart.png" title="Shopping Cart" width="45px" height="45px"></a>
+            <img src="image/profile.png" title="Your Profile" width="40px" height="40px" onclick="toggleMenu()">
+          </ul>
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="image/profile.png">
+                <h2>User</h2>
+              </div>
+              <hr>
+    
+              <a href="profile.html" class="sub-menu-link">
+              <img src="image/user.png">
+              <p>PROFILE & SETTINGS</p>
+              </a>
+                <a href="login.html" class="sub-menu-link">
+                  <img src="image/logout.png">
+                  <p>LOGOUT</p>
+                </a>
+              </hr>
+            </div>
+            </div>
+          </nav>
+          </div>
+</div>
+    <section class="product"> 
+        <h2 class="product-category">ARCHIVES</h2>
+        <button class="pre-btn"><img src="image/arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="image/arrow.png" alt=""></button>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="image/albums.jpeg" class="product-thumb" alt="">
+					<form>
+                    <button class="card-btn" formaction = "Album.html">Dive Deeper</button>
+					</form>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Albums</h2>
+                    <p class="product-short-description">Album Releases</p>  
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="image/belfort.jpeg" class="product-thumb" alt="">
+                   <form>
+                    <button class="card-btn" formaction = "belfort.html">Watch</button>
+					</form>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">belfort</h2>
+                    <p class="product-short-description">04 . 07 . 1997</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="image/france.jpeg" class="product-thumb" alt="">
+                    <form>
+                    <button class="card-btn" formaction = "france.html">Watch</button>
+					</form>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Vaison-la-Romaine</h2>
+                    <p class="product-short-description">28 . 05 . 2001</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="image/london.jpeg" class="product-thumb" alt="">
+                    <form>
+                    <button class="card-btn" formaction = "london.html">Watch</button>
+					</form>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">93 feet east</h2>
+                    <p class="product-short-description">16 . 01 . 2008</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="image/basement.jpeg" class="product-thumb" alt="">
+                    <form>
+                    <button class="card-btn" formaction = "basement.html">Watch</button>
+					</form>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">From the Basement</h2>
+                    <p class="product-short-description">24 . 06 . 2008</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="image/Peru.jpeg" class="product-thumb" alt="">
+                    <form>
+                    <button class="card-btn" formaction = "peru.html">Watch</button>
+					</form>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Estadio Nacional</h2>
+                    <p class="product-short-description">17 . 04 . 2018</p>
+                </div> 
+            </div>
+        </div> 
+        
+	<section id="associated-sites" class="section">
+    <div class="container-sites">
+
+
+        <h2>Linked Sites</h2>
+        <div class="associated-sites">
+          <a href="https://www.instagram.com/radiohead/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/radiohead" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/radiohead" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/channel/UCq19-LqvG35A-30oyAiPiqA" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+  
+
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container-sites">
+      <p>&copy; 2024 Radiohead. All rights reserved.</p>
+    </div>
+  </footer>	
+    <script src="archive.js">
+    </script>
+
+</body>
+</html>
